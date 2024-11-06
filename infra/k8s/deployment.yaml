@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: novostack-crm-coll-63ed80bf3d4541e6b4e4948aff203e34-depl
+  labels:
+    app: novostack-crm-coll-63ed80bf3d4541e6b4e4948aff203e34
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: novostack-crm-coll-63ed80bf3d4541e6b4e4948aff203e34
+  template:
+    metadata:
+      labels:
+        app: novostack-crm-coll-63ed80bf3d4541e6b4e4948aff203e34
+    spec:
+      containers:
+        - name: novostack-crm-coll-63ed80bf3d4541e6b4e4948aff203e34
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:novostack-crm-coll-63ed80bf3d4541e6b4e4948aff203e34
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9027
